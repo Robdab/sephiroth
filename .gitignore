@@ -1,0 +1,5 @@
+runtime/*
+static/swfs/*
+static/*.min.js
+sqlite.db
+*.pyc

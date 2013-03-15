@@ -1,0 +1,4 @@
+Sqlite3 Superuser - For Development Purposes ONLY.
+User:  admin
+Pwd:   admin
+Email: admin@admin.com
