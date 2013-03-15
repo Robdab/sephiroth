@@ -1,7 +1,7 @@
 from django.shortcuts import render_to_response
 from django.http import HttpResponseRedirect
 
-from cloud.models import List  
+from todo.models import List  
 
 
 def index(request):
@@ -19,4 +19,4 @@ def status_report(request):
         todo_dict['percent_complete'] = int(float(todo_dict['items_complete']) / todo_dict['item_count'] * 100)  
         todo_listing.append(todo_dict)
 
-    return render_to_response('cloud/status_report.html', { 'todo_listing': todo_listing })
+    return render_to_response('todo/status_report.html', { 'todo_listing': todo_listing })

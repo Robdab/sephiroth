@@ -1,6 +1,6 @@
 from django.conf.urls import patterns, include, url
 
-urlpatterns = patterns('cloud.views',
+urlpatterns = patterns('todo.views',
     url(r'^$', 'index'),#main/landing page? login?
     url(r'^status_report/$', 'status_report'),
     #url(r'^/', ),#profile page

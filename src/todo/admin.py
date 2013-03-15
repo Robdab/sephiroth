@@ -1,4 +1,4 @@
-﻿from cloud.models import List, Item
+﻿from todo.models import List, Item
 from django.contrib import admin
 
 admin.site.register(List)
