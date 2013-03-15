@@ -1,13 +1,15 @@
 from django.shortcuts import render_to_response
 from django.http import HttpResponseRedirect
+from django.contrib.auth import logout
+from django.contrib.auth.decorators import login_required
 
 from todo.models import List  
-
 
 def index(request):
     pass_to_template = 'this string was passed from views.py to the template.'
     return render_to_response('index.html', {'pass_to_template': pass_to_template})
 
+@login_required
 def status_report(request):
     todo_listing = []
 
@@ -20,3 +22,10 @@ def status_report(request):
         todo_listing.append(todo_dict)
 
     return render_to_response('todo/status_report.html', { 'todo_listing': todo_listing })
+
+def logout_page(request):
+    """
+    Log users out and re-direct them to the main page.
+    """
+    logout(request)
+    return HttpResponseRedirect('/')
